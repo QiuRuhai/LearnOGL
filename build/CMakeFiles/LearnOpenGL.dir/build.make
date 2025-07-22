@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/choutelei/02_CODE/LearnOpenGL
+CMAKE_SOURCE_DIR = /Users/choutelei/02_Code/LearnOpenGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/choutelei/02_CODE/LearnOpenGL/build
+CMAKE_BINARY_DIR = /Users/choutelei/02_Code/LearnOpenGL/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LearnOpenGL.dir/depend.make
@@ -73,48 +73,64 @@ CMakeFiles/LearnOpenGL.dir/codegen:
 .PHONY : CMakeFiles/LearnOpenGL.dir/codegen
 
 CMakeFiles/LearnOpenGL.dir/src/glad.c.o: CMakeFiles/LearnOpenGL.dir/flags.make
-CMakeFiles/LearnOpenGL.dir/src/glad.c.o: /Users/choutelei/02_CODE/LearnOpenGL/src/glad.c
+CMakeFiles/LearnOpenGL.dir/src/glad.c.o: /Users/choutelei/02_Code/LearnOpenGL/src/glad.c
 CMakeFiles/LearnOpenGL.dir/src/glad.c.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/choutelei/02_CODE/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LearnOpenGL.dir/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/glad.c.o -MF CMakeFiles/LearnOpenGL.dir/src/glad.c.o.d -o CMakeFiles/LearnOpenGL.dir/src/glad.c.o -c /Users/choutelei/02_CODE/LearnOpenGL/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LearnOpenGL.dir/src/glad.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/glad.c.o -MF CMakeFiles/LearnOpenGL.dir/src/glad.c.o.d -o CMakeFiles/LearnOpenGL.dir/src/glad.c.o -c /Users/choutelei/02_Code/LearnOpenGL/src/glad.c
 
 CMakeFiles/LearnOpenGL.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/LearnOpenGL.dir/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choutelei/02_CODE/LearnOpenGL/src/glad.c > CMakeFiles/LearnOpenGL.dir/src/glad.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choutelei/02_Code/LearnOpenGL/src/glad.c > CMakeFiles/LearnOpenGL.dir/src/glad.c.i
 
 CMakeFiles/LearnOpenGL.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/LearnOpenGL.dir/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choutelei/02_CODE/LearnOpenGL/src/glad.c -o CMakeFiles/LearnOpenGL.dir/src/glad.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choutelei/02_Code/LearnOpenGL/src/glad.c -o CMakeFiles/LearnOpenGL.dir/src/glad.c.s
 
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
-CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: /Users/choutelei/02_CODE/LearnOpenGL/src/main.cpp
+CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: /Users/choutelei/02_Code/LearnOpenGL/src/main.cpp
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/choutelei/02_CODE/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/main.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -c /Users/choutelei/02_CODE/LearnOpenGL/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/main.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.o -c /Users/choutelei/02_Code/LearnOpenGL/src/main.cpp
 
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/choutelei/02_CODE/LearnOpenGL/src/main.cpp > CMakeFiles/LearnOpenGL.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/choutelei/02_Code/LearnOpenGL/src/main.cpp > CMakeFiles/LearnOpenGL.dir/src/main.cpp.i
 
 CMakeFiles/LearnOpenGL.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/choutelei/02_CODE/LearnOpenGL/src/main.cpp -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/choutelei/02_Code/LearnOpenGL/src/main.cpp -o CMakeFiles/LearnOpenGL.dir/src/main.cpp.s
+
+CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o: CMakeFiles/LearnOpenGL.dir/flags.make
+CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o: /Users/choutelei/02_Code/LearnOpenGL/src/stb_image.cpp
+CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o: CMakeFiles/LearnOpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o -MF CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o.d -o CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o -c /Users/choutelei/02_Code/LearnOpenGL/src/stb_image.cpp
+
+CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/choutelei/02_Code/LearnOpenGL/src/stb_image.cpp > CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.i
+
+CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/choutelei/02_Code/LearnOpenGL/src/stb_image.cpp -o CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.s
 
 # Object files for target LearnOpenGL
 LearnOpenGL_OBJECTS = \
 "CMakeFiles/LearnOpenGL.dir/src/glad.c.o" \
-"CMakeFiles/LearnOpenGL.dir/src/main.cpp.o"
+"CMakeFiles/LearnOpenGL.dir/src/main.cpp.o" \
+"CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o"
 
 # External object files for target LearnOpenGL
 LearnOpenGL_EXTERNAL_OBJECTS =
 
 LearnOpenGL: CMakeFiles/LearnOpenGL.dir/src/glad.c.o
 LearnOpenGL: CMakeFiles/LearnOpenGL.dir/src/main.cpp.o
+LearnOpenGL: CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o
 LearnOpenGL: CMakeFiles/LearnOpenGL.dir/build.make
 LearnOpenGL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 LearnOpenGL: /opt/homebrew/lib/libglfw.3.4.dylib
 LearnOpenGL: CMakeFiles/LearnOpenGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/choutelei/02_CODE/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable LearnOpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable LearnOpenGL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LearnOpenGL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +142,6 @@ CMakeFiles/LearnOpenGL.dir/clean:
 .PHONY : CMakeFiles/LearnOpenGL.dir/clean
 
 CMakeFiles/LearnOpenGL.dir/depend:
-	cd /Users/choutelei/02_CODE/LearnOpenGL/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/choutelei/02_CODE/LearnOpenGL /Users/choutelei/02_CODE/LearnOpenGL /Users/choutelei/02_CODE/LearnOpenGL/build /Users/choutelei/02_CODE/LearnOpenGL/build /Users/choutelei/02_CODE/LearnOpenGL/build/CMakeFiles/LearnOpenGL.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/choutelei/02_Code/LearnOpenGL/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/choutelei/02_Code/LearnOpenGL /Users/choutelei/02_Code/LearnOpenGL /Users/choutelei/02_Code/LearnOpenGL/build /Users/choutelei/02_Code/LearnOpenGL/build /Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles/LearnOpenGL.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LearnOpenGL.dir/depend
 
