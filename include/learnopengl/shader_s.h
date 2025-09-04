@@ -26,8 +26,8 @@ public:
         std::ifstream vShaderFile;
         std::ifstream fShaderFile;
 
-        vShaderFile.exceptions(std::ifstream::failbit || std::ifstream::badbit);
-        fShaderFile.exceptions(std::ifstream::failbit || std::ifstream::badbit);
+        vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+        fShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         try{
             vShaderFile.open(vertexPath);
             fShaderFile.open(fragmentPath);
