@@ -151,6 +151,22 @@ int main()
     };
     unsigned int cubemapTexture = loadCubemap(faces);
 
+    unsigned int uniformBlockMat = glGetUniformBlockIndex(shader.ID, "Matrices");
+    glUniformBlockBinding(shader.ID, uniformBlockMat, 0);
+
+    unsigned int uboMat;
+    glGenBuffers(1, &uboMat);
+    glBindBuffer(GL_UNIFORM_BUFFER, uboMat);
+    glBufferData(GL_UNIFORM_BUFFER, 2 * sizeof(glm::mat4), nullptr, GL_STATIC_DRAW);
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
+    glBindBufferRange(GL_UNIFORM_BUFFER, 0, uboMat, 0, 2 * sizeof(glm::mat4));
+
+    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+    glBindBuffer(GL_UNIFORM_BUFFER, uboMat);
+    glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), glm::value_ptr(projection));
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -170,14 +186,15 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glEnable(GL_DEPTH_TEST);
 
+        glm::mat4 view = camera.GetViewMatrix();
+        glBindBuffer(GL_UNIFORM_BUFFER, uboMat);
+        glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(view));
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
         shader.use();
         shader.setVec3("cameraPos", camera.Position);
         glm::mat4 model = glm::mat4(1.0f);
-        glm::mat4 view = camera.GetViewMatrix();
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         shader.setMat4("model", model);
-        shader.setMat4("view", view);
-        shader.setMat4("projection", projection);
         ourModel.Draw(shader);
 
         glDepthFunc(GL_LEQUAL);
