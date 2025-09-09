@@ -121,7 +121,7 @@ int main()
          1.0f, -1.0f,  1.0f
     };
 
-    Model ourModel("../resources/objects/backpack/backpack.obj");
+    Model ourModel("../resources/objects/nanosuit_reflection/nanosuit.obj");
 
     // skybox VAO
     unsigned int skyboxVAO, skyboxVBO;
@@ -142,12 +142,12 @@ int main()
     skyboxShader.setInt("skybox", 0);
 
     std::vector<std::string> faces{
-    "../resources/skybox/right.jpg",
-    "../resources/skybox/left.jpg",
-    "../resources/skybox/top.jpg",
-    "../resources/skybox/bottom.jpg",
-    "../resources/skybox/front.jpg",
-    "../resources/skybox/back.jpg"
+    "../resources/texture/skybox/right.jpg",
+    "../resources/texture/skybox/left.jpg",
+    "../resources/texture/skybox/top.jpg",
+    "../resources/texture/skybox/bottom.jpg",
+    "../resources/texture/skybox/front.jpg",
+    "../resources/texture/skybox/back.jpg"
     };
     unsigned int cubemapTexture = loadCubemap(faces);
 
