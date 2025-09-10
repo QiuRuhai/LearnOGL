@@ -13,7 +13,6 @@
 #include <iostream>
 #include <filesystem>
 
-
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
@@ -71,7 +70,8 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("../shader/shader.vs", "../shader/shader.fs", "../shader/shader.gs");
+    Shader shader("../shader/shader/shader.vs", "../shader/shader/shader.fs");
+    Shader normalShader("../shader/normal_visualization/normal.vs", "../shader/normal_visualization/normal.fs", "../shader/normal_visualization/normal.gs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -102,10 +102,13 @@ int main()
         shader.setMat4("projection", projection);
         shader.setMat4("view", view);
         shader.setMat4("model", model);
-
-        shader.setFloat("time", static_cast<float>(glfwGetTime()));
-
         outModel.Draw(shader);
+
+        normalShader.use();
+        normalShader.setMat4("view", view);
+        normalShader.setMat4("model", model);
+        normalShader.setMat4("projection", projection);
+        outModel.Draw(normalShader);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------

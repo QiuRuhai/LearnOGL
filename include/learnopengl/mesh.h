@@ -118,7 +118,4 @@ inline void Mesh::Draw(Shader &shader) {
     glBindVertexArray(0);
 }
 
-
-
-
 #endif //LEARNOPENGL_MESH_H
