@@ -1,1 +1,0 @@
-/usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/LearnOpenGL.dir/src/glad.c.o CMakeFiles/LearnOpenGL.dir/src/main.cpp.o CMakeFiles/LearnOpenGL.dir/src/stb_image.cpp.o -o LearnOpenGL  -Wl,-rpath,/opt/homebrew/lib -framework OpenGL /opt/homebrew/lib/libglfw.3.4.dylib

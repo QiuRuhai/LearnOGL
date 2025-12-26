@@ -79,11 +79,11 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader pbrShader("../shader/pbr/pbr.vs", "../shader/pbr/pbr.fs");
-    Shader equirectangularToCubemapShader("../shader/cubemap/cubemap.vs", "../shader/cubemap/cubemap.fs");
-    Shader irradianceShader("../shader/irradiance/irradiance.vs", "../shader/irradiance/irradiance.fs");
-    Shader backgroundShader("../shader/background/background.vs", "../shader/background/background.fs");
-
+    Shader pbrShader("../../../shader/pbr/pbr.vs", "../../../shader/pbr/pbr.fs");
+    Shader equirectangularToCubemapShader("../../../shader/cubemap/cubemap.vs", "../../../shader/cubemap/cubemap.fs");
+    Shader irradianceShader("../../../shader/irradiance/irradiance.vs", "../../../shader/irradiance/irradiance.fs");
+    Shader backgroundShader("../../../shader/background/background.vs", "../../../shader/background/background.fs");
+    
     pbrShader.use();
     pbrShader.setInt("irrandianceMap", 0);
     pbrShader.setVec3("albedo", 0.5f, 0.0f, 0.0f);
@@ -127,8 +127,8 @@ int main()
     // ---------------------------------
     stbi_set_flip_vertically_on_load(true);
     int width, height, nrComponents;
-    float *data = stbi_loadf("../resources/texture/hdr/newport_loft.hdr", &width, &height, &nrComponents, 0);
-    unsigned int hdrTexture;
+    float *data = stbi_loadf("../../../resources/texture/hdr/newport_loft.hdr", &width, &height, &nrComponents, 0);
+    unsigned int hdrTexture = 0;
     if (data)
     {
         glGenTextures(1, &hdrTexture);

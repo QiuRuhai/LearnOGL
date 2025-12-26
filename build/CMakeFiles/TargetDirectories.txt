@@ -1,3 +1,0 @@
-/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles/LearnOpenGL.dir
-/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles/edit_cache.dir
-/Users/choutelei/02_Code/LearnOpenGL/build/CMakeFiles/rebuild_cache.dir
